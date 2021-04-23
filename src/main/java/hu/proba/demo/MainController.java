@@ -8,11 +8,9 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
 public class MainController {
-
     @ResponseBody
     @GetMapping (path="/1234")
     public String getMessage(@RequestParam(value = "name", defaultValue = "Felhasznalo")  String name){
         return String.format("Hello %s", name);
     }
-
 }
